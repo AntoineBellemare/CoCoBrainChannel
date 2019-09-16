@@ -1,0 +1,54 @@
+#N canvas 583 43 709 441 10;
+#X floatatom 214 256 5 0 0 0 - - -;
+#X obj 464 244 expr pow(2 \, ($f1/1200));
+#X floatatom 464 222 5 0 0 0 - - -;
+#X text 423 219 cents;
+#X floatatom 464 314 0 0 0 0 - - -;
+#X floatatom 527 312 0 0 0 0 - - -;
+#X floatatom 464 266 0 0 0 0 - - -;
+#X obj 464 340 harmonicity;
+#X floatatom 464 365 0 0 0 0 - - -;
+#X obj 464 289 dec2frac;
+#X obj 199 343 /;
+#X obj 169 285 dec2frac;
+#X msg 146 168 3.14159;
+#X msg 187 214 -0.625;
+#X text 197 167 aproximation of pi;
+#X msg 169 192 -1.33333;
+#X floatatom 169 256 6 0 0 0 - - -;
+#X msg 110 168 1.5;
+#X text 253 250 maximum denominator value, f 11;
+#X floatatom 214 311 5 0 0 0 - - -;
+#X text 249 310 denominator;
+#X floatatom 169 311 5 0 0 0 - - -;
+#X text 106 310 numerator;
+#X floatatom 199 369 0 0 0 0 - - -;
+#X text 424 265 ratio;
+#X text 372 151 Example of usage in this library \, convert from cents
+to ratio \, then get the fractional form and use it to get a harmonicity
+value, f 44;
+#X text 158 83 * https://people.revoledu.com/kardi/tutorial/ContinuedFraction/Decimal-Fraction-Conversion.htm
+, f 61;
+#X text 158 28 Convert a decimal number to a fractional form. The algorithm
+approximates via continued fractions*. The argument/2nd inlet determines
+the accuracy as the maximum denominator value (500 by default)., f
+61;
+#X connect 0 0 11 1;
+#X connect 1 0 6 0;
+#X connect 2 0 1 0;
+#X connect 4 0 7 0;
+#X connect 5 0 7 1;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 9 0 4 0;
+#X connect 9 1 5 0;
+#X connect 10 0 23 0;
+#X connect 11 0 21 0;
+#X connect 11 1 19 0;
+#X connect 12 0 16 0;
+#X connect 13 0 16 0;
+#X connect 15 0 16 0;
+#X connect 16 0 11 0;
+#X connect 17 0 16 0;
+#X connect 19 0 10 1;
+#X connect 21 0 10 0;

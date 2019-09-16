@@ -1,0 +1,25 @@
+#N canvas 654 82 493 470 10;
+#X text 152 42 convert dB to loudness in phons \, it takes a dB value
+(right inlet) and a value in hertz (left inlet), f 33;
+#X floatatom 250 131 5 0 0 0 - - -;
+#X floatatom 187 130 5 0 0 0 - - -;
+#X obj 187 194 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X obj 97 54 db2phon;
+#X text 248 111 Hertz;
+#X text 186 111 dB;
+#X obj 187 159 db2phon 100;
+#X text 58 258 The unit measure of loudess (perceived intensity) is
+phons. Two different frequencies at 60 decibel may have a different
+loudness because the human hearing sensitivity varies with frequency.
+, f 61;
+#X text 58 312 The loudness curves shows this variation and uses 1Khz
+as the reference value. Therefore \, 60 phons means "as loud as a 60
+dB \, 1000 Hz tone", f 61;
+#X text 58 232 Phons:;
+#X text 58 356 It is useful to plot equal loudness curves which show
+that variation for the average human ear. These can then be used to
+adjust the sound gain.;
+#X connect 1 0 7 1;
+#X connect 2 0 7 0;
+#X connect 7 0 3 0;

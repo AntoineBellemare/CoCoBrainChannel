@@ -1,0 +1,26 @@
+#N canvas 613 163 464 262 10;
+#X text 36 27 The spectral centroid is the “center of gravity”
+of a spectrum and is commonly associated with the measure of the brightness
+of a sound., f 62;
+#X obj 123 195 centroid~ 2048 4;
+#X obj 123 227 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 449.902 256;
+#X msg 310 102 \; pd dsp 1;
+#X obj 310 77 loadbang;
+#X msg 236 172 1024 2;
+#X text 240 194 argument/message: window size & overlap, f 21;
+#X obj 88 131 osc~ 400;
+#X obj 123 158 osc~ 500;
+#X msg 227 151 2048 4;
+#X msg 216 129 4096 4;
+#X msg 202 105 8192 4;
+#X msg 180 84 16384 4;
+#X connect 1 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 1;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;
+#X connect 9 0 1 1;
+#X connect 10 0 1 1;
+#X connect 11 0 1 1;
+#X connect 12 0 1 1;
