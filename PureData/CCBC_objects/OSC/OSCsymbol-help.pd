@@ -1,0 +1,17 @@
+#N canvas 357 44 654 357 10;
+#X obj 64 121 cnv 15 75 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X msg 69 82 Any list /converts 2 OSC path;
+#X obj 69 123 OSCsymbol;
+#X obj 69 147 print;
+#X text 61 229 See also:;
+#X text 154 254 adds one more namespace to the front of the symbol
+;
+#X text 137 274 splits an OSC message into the path component and arguments
+;
+#X text 51 25 OSCsymbol converts any Pd list into one OSC symbol (glued
+togther with slashes);
+#X obj 64 254 OSCprepend;
+#X obj 64 274 OSCsplit;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;

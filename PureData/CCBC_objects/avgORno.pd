@@ -1,0 +1,27 @@
+#N canvas 0 50 641 449 10;
+#X obj 301 180 EEG_avg02;
+#X obj 352 102 inlet window;
+#X obj 297 249 outlet signal;
+#X obj 283 144 gate 2;
+#X obj 247 123 + 1;
+#X obj 247 103 r \$1;
+#X obj 280 102 inlet value;
+#X floatatom 247 144 5 0 0 0 - - -;
+#X floatatom 462 162 5 0 0 0 - - -;
+#X obj 336 211 spigot;
+#X obj 247 164 - 1;
+#X obj 392 196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X connect 0 0 9 0;
+#X connect 1 0 0 2;
+#X connect 3 0 2 0;
+#X connect 3 0 8 0;
+#X connect 3 1 0 0;
+#X connect 4 0 3 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 1;
+#X connect 7 0 10 0;
+#X connect 9 0 2 0;
+#X connect 10 0 11 0;
+#X connect 11 0 9 1;

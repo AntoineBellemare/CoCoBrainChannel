@@ -1,0 +1,64 @@
+#N canvas 309 22 910 546 10;
+#X obj 516 19 cnv 15 360 140 empty empty About.Wildcards: 10 12 0 14
+-262130 -66577 0;
+#N canvas 221 136 464 376 ABOUT_WILDCARDS 0;
+#X text 50 62 * matches zero or more characters;
+#X text 51 75 ? matches any single character;
+#X text 113 256 EXAMPLES:;
+#X text 15 103 [^set] matches any character NOT in the set;
+#X text 22 89 [set] matches any character in the set;
+#X text 18 177 A set is a group of characters or ranges \, where a
+range is written as two characters seperated with a hyphen. Eg \, a-z
+denotes all characters between a to z inclusive.;
+#X text 16 131 []set] matches a close bracket and any character in
+the set;
+#X text 16 117 [-set] matches a hyphen and any character in the set
+;
+#X text 87 283 a*c = ac abc abbc ...;
+#X text 87 296 a?c = acc abc aXc ...;
+#X text 59 310 a[a-z]c = aac abc acc ...;
+#X text 52 324 a[-a-z]c = a-c aac abc ...;
+#X text 20 18 ABOUT OSC WILDCARDS:;
+#X restore 653 129 pd ABOUT_WILDCARDS;
+#X obj 90 304 cnv 15 280 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 95 306 OSCrouter /foo/alpha /foo/beta /sheefa;
+#X msg 77 147 /foo/alpha a b c;
+#X msg 136 271 /somebody else;
+#X obj 95 346 print A;
+#X obj 358 346 print NO_MATCH;
+#X obj 270 346 print C;
+#X obj 182 346 print B;
+#X text 521 48 1) wildcards cannot be SENT to [OSCparse] \,;
+#X text 521 88 2) wildcards cannot be arguments for [OSCrouter] \,
+;
+#X text 542 102 but they can be sent in the routed messages;
+#X text 521 128 3) wildcard info:;
+#X msg 95 171 /foo/* this goes to both;
+#X msg 111 200 list /sheefa 1 2 3;
+#X text 542 61 but they can be used in the parsing argument;
+#X msg 122 222 /sheefa;
+#X text 183 223 <- bang sent for no args;
+#X text 249 200 <- list selector is okay;
+#X text 221 246 <- no partial matches (use OSCparse);
+#X msg 130 245 /sheefa/foo;
+#X text 277 171 <- wildcard acceptable;
+#X text 51 25 OSCrouter routes messages based on the OSC path. The
+benefit over the regular Pd [route] object is that wildcards in the
+incoming OSC messages are accepted.;
+#X text 51 420 See also:;
+#X obj 54 444 OSCparse /*;
+#X text 151 445 an OSC message router that accepts wildcard arguments
+;
+#X text 51 75 If you want to route using wildcards or partial matches
+\, use [OSCparse] instead;
+#X connect 3 0 6 0;
+#X connect 3 1 9 0;
+#X connect 3 2 8 0;
+#X connect 3 3 7 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 14 0 3 0;
+#X connect 15 0 3 0;
+#X connect 17 0 3 0;
+#X connect 21 0 3 0;

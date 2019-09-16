@@ -1,0 +1,78 @@
+#N canvas 222 22 948 519 10;
+#X obj 91 195 cnv 15 105 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X msg 40 100 /foo 1 2 3;
+#X msg 66 126 /foo/bar 1 2 3;
+#X msg 96 151 /sheefa 1 2 3;
+#X msg 215 127 symbol /sheefa;
+#X obj 659 237 cnv 15 140 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 491 238 cnv 15 110 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 505 327 cnv 15 360 140 empty empty About.Wildcards: 10 12 0
+14 -262130 -66577 0;
+#N canvas 221 136 464 376 ABOUT_WILDCARDS 0;
+#X text 50 62 * matches zero or more characters;
+#X text 51 75 ? matches any single character;
+#X text 113 256 EXAMPLES:;
+#X text 15 103 [^set] matches any character NOT in the set;
+#X text 22 89 [set] matches any character in the set;
+#X text 18 177 A set is a group of characters or ranges \, where a
+range is written as two characters seperated with a hyphen. Eg \, a-z
+denotes all characters between a to z inclusive.;
+#X text 16 131 []set] matches a close bracket and any character in
+the set;
+#X text 16 117 [-set] matches a hyphen and any character in the set
+;
+#X text 87 283 a*c = ac abc abbc ...;
+#X text 87 296 a?c = acc abc aXc ...;
+#X text 59 310 a[a-z]c = aac abc acc ...;
+#X text 52 324 a[-a-z]c = a-c aac abc ...;
+#X text 20 18 ABOUT OSC WILDCARDS:;
+#X restore 642 437 pd ABOUT_WILDCARDS;
+#X obj 539 177 cnv 15 200 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 492 239 OSCparse /*/msg;
+#X msg 518 104 /namespace/channel/3/msg 1 2 3;
+#X obj 543 179 OSCparse /namespace/channel;
+#X obj 662 239 OSCparse /[1-4]/msg;
+#X msg 547 124 /namespace/channel/5/msg 1 2 3;
+#X obj 662 263 print B;
+#X obj 492 265 print A;
+#X text 562 144 Chaining multiple OSCparse objects is useful to differentiate
+between namespaces:;
+#X obj 86 224 print MATCH!;
+#X obj 194 224 print NO_MATCH;
+#X msg 225 150 symbol sheefa;
+#X text 34 266 right outlet: unmatched messages;
+#X text 34 252 left outlet: matched or partially-matched OSC messages
+;
+#X obj 96 197 OSCparse /foo;
+#X text 510 356 1) wildcards cannot be SENT to [OSCparse] \,;
+#X text 510 396 2) wildcards cannot be arguments for [OSCrouter] \,
+;
+#X text 212 107 set the OSC path:;
+#X text 234 167 (don't need slash);
+#X text 531 410 but they can be sent in the routed messages;
+#X text 510 436 3) wildcard info:;
+#X text 531 369 but they can be used in the parsing argument;
+#X text 51 320 See also:;
+#X obj 54 344 OSCrouter /foo /bar;
+#X text 201 345 an OSC message router;
+#X text 51 25 OSCparse parses incoming OSC messages to see if they
+match a partial OSC path or wildcards. The remainder of any matched
+message (including arguments) goes out the left outlet \, while unmatched
+messages go out the right outlet.;
+#X connect 1 0 23 0;
+#X connect 2 0 23 0;
+#X connect 3 0 23 0;
+#X connect 4 0 23 1;
+#X connect 10 0 16 0;
+#X connect 11 0 12 0;
+#X connect 12 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 15 0;
+#X connect 14 0 12 0;
+#X connect 20 0 23 1;
+#X connect 23 0 18 0;
+#X connect 23 1 19 0;

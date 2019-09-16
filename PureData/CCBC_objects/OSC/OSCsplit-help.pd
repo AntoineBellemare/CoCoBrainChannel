@@ -1,0 +1,21 @@
+#N canvas 46 398 562 392 10;
+#X obj 143 164 cnv 15 70 20 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 148 166 OSCsplit;
+#X msg 120 121 /aa/blah/cc dee eee eff;
+#X obj 134 201 print ARGS;
+#X text 129 226 (Note: reversed order!);
+#X text 61 270 See also:;
+#X text 141 315 converts an entire list into one OSC path symbol;
+#X text 151 294 adds one more namespace to the front of the symbol
+;
+#X text 51 25 OSCsplit accepts an OSC message as a list and sends the
+OSC path from the right outlet first (in case you want to set routing
+or spigots for the arguments). Then the rest of the arguments come
+out the left outlet.;
+#X obj 214 201 print OSC_PATH;
+#X obj 64 294 OSCprepend;
+#X obj 64 315 OSCsymbol;
+#X connect 1 0 3 0;
+#X connect 1 1 9 0;
+#X connect 2 0 1 0;
