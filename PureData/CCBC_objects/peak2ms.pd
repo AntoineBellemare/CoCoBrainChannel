@@ -8,7 +8,7 @@
 #X obj 183 109 / 8;
 #X obj 243 171 t b;
 #X floatatom 183 79 5 0 0 0 - - -;
-#X obj 183 58 r \$1;
+#X obj 183 39 r \$1;
 #X obj 227 110 r \$2;
 #X obj 125 270 outlet;
 #X msg 134 232 \$1 100;

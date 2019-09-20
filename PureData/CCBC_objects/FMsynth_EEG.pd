@@ -1,8 +1,8 @@
-#N canvas 352 122 1210 631 10;
+#N canvas 107 88 1210 631 10;
 #X obj 500 455 +~;
 #X obj 501 610 outlet~;
-#X text 548 513 porteuse;
-#X obj 533 562 *~;
+#X text 577 573 porteuse;
+#X obj 510 537 *~;
 #X obj 515 330 sig~ 150;
 #X obj 824 325 *~;
 #X obj 872 343 *~;
@@ -48,6 +48,8 @@
 #X obj 691 469 r feed;
 #X obj 824 244 r ratio;
 #X floatatom 1000 358 5 0 0 0 - - -;
+#X obj 691 245 lfo~ 0.1 0.2 0.8;
+#X floatatom 544 508 5 0 0 0 - - -;
 #X connect 0 0 41 0;
 #X connect 0 0 43 0;
 #X connect 4 0 0 0;
