@@ -6,24 +6,26 @@
 #X obj 247 103 r \$1;
 #X obj 280 102 inlet value;
 #X floatatom 247 144 5 0 0 0 - - -;
-#X floatatom 200 282 5 0 0 0 - - -;
 #X obj 336 211 spigot;
 #X obj 247 164 - 1;
-#X obj 392 196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 392 196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 436 101 inlet ramptime;
 #X obj 301 180 peak_avg;
-#X connect 0 0 12 2;
-#X connect 2 0 1 0;
-#X connect 2 0 7 0;
-#X connect 2 1 12 0;
+#X obj 283 219 line;
+#X msg 283 198 \$1 50;
+#X connect 0 0 11 2;
+#X connect 2 0 13 0;
+#X connect 2 1 11 0;
 #X connect 3 0 2 0;
 #X connect 3 0 6 0;
 #X connect 4 0 3 0;
 #X connect 5 0 2 1;
-#X connect 6 0 9 0;
-#X connect 8 0 1 0;
-#X connect 9 0 10 0;
-#X connect 10 0 8 1;
-#X connect 11 0 12 1;
-#X connect 12 0 8 0;
+#X connect 6 0 8 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 1;
+#X connect 10 0 11 1;
+#X connect 11 0 7 0;
+#X connect 12 0 1 0;
+#X connect 13 0 12 0;
