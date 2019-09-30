@@ -8,12 +8,12 @@
 #X floatatom 247 144 5 0 0 0 - - -;
 #X obj 336 211 spigot;
 #X obj 247 164 - 1;
-#X obj 392 196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 392 196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 436 101 inlet ramptime;
 #X obj 301 180 peak_avg;
 #X obj 283 219 line;
-#X msg 283 198 \$1 50;
+#X msg 283 198 \$1 25;
 #X connect 0 0 11 2;
 #X connect 2 0 13 0;
 #X connect 2 1 11 0;
