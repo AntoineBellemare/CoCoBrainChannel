@@ -1,4 +1,4 @@
-#N struct 1703-f float x;
+#N struct 1699-f float x;
 #N struct 1009-f float x;
 #N canvas -9 -9 1920 976 10;
 #X obj 1334 869 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -997,7 +997,7 @@
 #X obj 461 -32 / 1000;
 #X obj 463 -54 random 1000;
 #X obj 106 116 nbx 3 14 0 127 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 29 256;
+-1 -1 39 256;
 #N canvas 1 84 844 677 monomode 0;
 #N canvas 415 379 628 478 reaonbp 0;
 #X obj 23 233 *;
@@ -1316,7 +1316,7 @@
 #X connect 18 0 16 0;
 #X restore -185 414 pd monomode;
 #X obj 106 136 nbx 3 14 0 127 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 52.7092 256;
+-1 -1 49.8864 256;
 #N canvas 1 82 844 677 monomode 0;
 #N canvas 415 379 628 478 reaonbp 0;
 #X obj 23 233 *;
@@ -1635,7 +1635,7 @@
 #X connect 18 0 16 0;
 #X restore -167 443 pd monomode;
 #X obj 106 156 nbx 3 14 0 127 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 62.5567 256;
+-1 -1 57.4183 256;
 #N canvas 1 82 844 677 monomode 0;
 #N canvas 415 379 628 478 reaonbp 0;
 #X obj 23 233 *;
@@ -1954,7 +1954,7 @@
 #X connect 18 0 16 0;
 #X restore -76 529 pd monomode;
 #X obj 153 116 nbx 3 14 0 127 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 29 256;
+-1 -1 39 256;
 #N canvas 1 82 844 677 monomode 0;
 #N canvas 415 379 628 478 reaonbp 0;
 #X obj 23 233 *;
@@ -2273,7 +2273,7 @@
 #X connect 18 0 16 0;
 #X restore -48 561 pd monomode;
 #X obj 153 136 nbx 3 14 0 127 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 52.7092 256;
+-1 -1 49.8864 256;
 #N canvas 1 82 844 677 monomode 0;
 #N canvas 415 379 628 478 reaonbp 0;
 #X obj 23 233 *;
@@ -2592,7 +2592,7 @@
 #X connect 18 0 16 0;
 #X restore -30 590 pd monomode;
 #X obj 153 156 nbx 3 14 0 127 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 56.512 256;
+-1 -1 54 256;
 #N canvas 1 82 844 677 monomode 0;
 #N canvas 415 379 628 478 reaonbp 0;
 #X obj 23 233 *;
@@ -2911,7 +2911,7 @@
 #X connect 18 0 16 0;
 #X restore 36 619 pd monomode;
 #X obj 198 116 nbx 3 14 0 127 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 29 256;
+-1 -1 39 256;
 #N canvas 1 82 844 677 monomode 0;
 #N canvas 415 379 628 478 reaonbp 0;
 #X obj 23 233 *;
@@ -3230,7 +3230,7 @@
 #X connect 18 0 16 0;
 #X restore 64 651 pd monomode;
 #X obj 198 136 nbx 3 14 0 127 0 1 empty empty empty 0 -8 0 10 -262144
--1 -1 52.7092 256;
+-1 -1 49.8864 256;
 #N canvas 1 82 844 677 monomode 0;
 #N canvas 415 379 628 478 reaonbp 0;
 #X obj 23 233 *;
@@ -4471,7 +4471,7 @@
 #X obj 42 474 moses 0.1;
 #X obj 98 553 outlet;
 #X obj 108 146 hsl 150 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 13783 1;
+-1 -1 745 1;
 #X obj 214 101 hsl 100 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj -26 156 /;
@@ -4731,9 +4731,9 @@ length;
 #X obj 42 474 moses 0.1;
 #X obj 98 553 outlet;
 #X obj 108 146 hsl 150 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 14900 1;
+-1 -1 745 1;
 #X obj 214 101 hsl 100 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3046 1;
+-1 -1 0 1;
 #X obj -26 156 /;
 #X obj -11 189 + 0.05;
 #X obj 26 168 clip 0 8;
@@ -4989,9 +4989,9 @@ length;
 #X obj 42 474 moses 0.1;
 #X obj 98 553 outlet;
 #X obj 108 146 hsl 150 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 14900 1;
+-1 -1 11920 1;
 #X obj 214 101 hsl 100 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4243 1;
+-1 -1 0 1;
 #X obj -26 156 /;
 #X obj -11 189 + 0.05;
 #X obj 26 168 clip 0 8;
@@ -5249,7 +5249,7 @@ length;
 #X obj 108 146 hsl 150 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 14900 1;
 #X obj 214 101 hsl 100 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9900 1;
+-1 -1 7425 1;
 #X obj -26 156 /;
 #X obj -11 189 + 0.05;
 #X obj 26 168 clip 0 8;
@@ -5505,9 +5505,9 @@ length;
 #X obj 42 474 moses 0.1;
 #X obj 98 553 outlet;
 #X obj 108 146 hsl 150 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 14900 1;
+-1 -1 2607 1;
 #X obj 214 101 hsl 100 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1747 1;
+-1 -1 0 1;
 #X obj -26 156 /;
 #X obj -11 189 + 0.05;
 #X obj 26 168 clip 0 8;
@@ -5763,9 +5763,9 @@ length;
 #X obj 42 474 moses 0.1;
 #X obj 98 553 outlet;
 #X obj 108 146 hsl 150 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 14900 1;
+-1 -1 11920 1;
 #X obj 214 101 hsl 100 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4569 1;
+-1 -1 0 1;
 #X obj -26 156 /;
 #X obj -11 189 + 0.05;
 #X obj 26 168 clip 0 8;
@@ -6021,9 +6021,9 @@ length;
 #X obj 42 474 moses 0.1;
 #X obj 98 553 outlet;
 #X obj 108 146 hsl 150 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 14900 1;
+-1 -1 745 1;
 #X obj 214 101 hsl 100 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2970 1;
+-1 -1 0 1;
 #X obj -26 156 /;
 #X obj -11 189 + 0.05;
 #X obj 26 168 clip 0 8;
@@ -6279,9 +6279,9 @@ length;
 #X obj 42 474 moses 0.1;
 #X obj 98 553 outlet;
 #X obj 108 146 hsl 150 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6333 1;
+-1 -1 14900 1;
 #X obj 214 101 hsl 100 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 6187 1;
 #X obj -26 156 /;
 #X obj -11 189 + 0.05;
 #X obj 26 168 clip 0 8;
@@ -6539,7 +6539,7 @@ length;
 #X obj 108 146 hsl 150 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 14900 1;
 #X obj 214 101 hsl 100 8 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9900 1;
+-1 -1 4538 1;
 #X obj -26 156 /;
 #X obj -11 189 + 0.05;
 #X obj 26 168 clip 0 8;
@@ -8334,7 +8334,7 @@ quantized to multiples of the clock triggering different notes;
 #X obj 454 364 r hibetapeakbin;
 #X obj 454 384 r gammapeakbin;
 #X obj 136 69 loadbang;
-#X msg 136 90 0;
+#X msg 97 98 0;
 #X obj 211 186 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 242 186 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -8358,6 +8358,8 @@ quantized to multiples of the clock triggering different notes;
 #X obj 25 240 s FMoct5X;
 #X obj 304 268 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
+#X msg 136 92 1;
+#X obj 330 322 s startMS;
 #X connect 0 0 8 0;
 #X connect 3 0 9 0;
 #X connect 4 0 10 0;
@@ -8383,18 +8385,13 @@ quantized to multiples of the clock triggering different notes;
 #X connect 38 0 32 0;
 #X connect 39 0 33 0;
 #X connect 40 0 41 0;
+#X connect 40 0 59 0;
 #X connect 41 0 0 0;
 #X connect 41 0 7 0;
 #X connect 41 0 6 0;
 #X connect 41 0 5 0;
 #X connect 41 0 4 0;
 #X connect 41 0 3 0;
-#X connect 41 0 33 0;
-#X connect 41 0 32 0;
-#X connect 41 0 31 0;
-#X connect 41 0 30 0;
-#X connect 41 0 29 0;
-#X connect 41 0 28 0;
 #X connect 41 0 42 0;
 #X connect 41 0 46 0;
 #X connect 41 0 45 0;
@@ -8416,6 +8413,8 @@ quantized to multiples of the clock triggering different notes;
 #X connect 58 0 31 0;
 #X connect 58 0 32 0;
 #X connect 58 0 33 0;
+#X connect 58 0 60 0;
+#X connect 59 0 58 0;
 #X coords 0 -1 1 1 250 250 2 200 100;
 #X restore 49 568 pd routingOnOff;
 #X text 202 100 OUTPUT (FM): FMmix1 FMmix2 FMmix3;
@@ -8430,12 +8429,12 @@ quantized to multiples of the clock triggering different notes;
 #X obj 108 180 hsl 128 15 0.1 500 1 1 empty empty Index_2 -2 -8 0 10
 -261682 -1 -1 5300 1;
 #X obj 108 150 hsl 128 15 0.001 10 1 1 empty empty Index_1 -2 -8 0
-10 -262130 -1 -1 3400 1;
+10 -262130 -1 -1 3600 1;
 #X obj 108 210 hsl 128 15 0.1 500 1 1 empty empty Index_3 -2 -8 0 10
--261234 -1 -1 6200 1;
+-261234 -1 -1 3300 1;
 #X obj 58 424 s index3;
 #X obj 109 241 hsl 128 15 0.001 50 1 1 empty empty Index_4 -2 -8 0
-10 -232576 -1 -1 3654 1;
+10 -232576 -1 -1 5254 1;
 #X obj 124 427 s index4;
 #X obj 107 118 hsl 128 15 0.5 50 1 1 empty empty Ratio -2 -8 0 10 -228856
 -1 -1 2200 1;
@@ -9481,9 +9480,9 @@ the Pd window.;
 1;
 #X obj 289 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 307 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 307 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 325 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 325 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 253 139 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -9783,7 +9782,7 @@ ratioATz hurstz svdz higuchiz;
 #X obj 636 338 s gammasub;
 #X text 110 117 Peak's Multiplier;
 #X obj 251 205 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -203904
--1 -1 1;
+-1 -1 2;
 #X text 248 173 Oct. val.;
 #X floatatom 252 228 5 0 0 0 - - -;
 #X obj 162 -147 expr (1 * pow ($f2 \, $f1));
@@ -10252,6 +10251,7 @@ between 1 and 2 and sorted ascendally;
 -1 -1;
 #X text 349 138 Capture peaks;
 #X obj 472 215 s peaktrig;
+#X obj 682 442 r startMS;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
@@ -10338,6 +10338,7 @@ between 1 and 2 and sorted ascendally;
 #X connect 101 0 47 0;
 #X connect 101 0 100 0;
 #X connect 102 0 104 0;
+#X connect 105 0 80 0;
 #X coords 0 -1 1 1 350 350 2 100 100;
 #X restore 533 425 pd PeaksManip;
 #X text 223 491 Add rounding as argument;
@@ -10758,6 +10759,10 @@ pitches);
 #X restore 1579 446 pd quantize;
 #X obj 376 62 loadbang;
 #X msg 376 85 0;
+#X obj 99 63 loadbang;
+#X msg 57 88 1;
+#X msg 132 86 3;
+#X msg 99 86 2;
 #X connect 0 0 35 0;
 #X connect 1 0 94 0;
 #X connect 2 0 28 1;
@@ -10843,6 +10848,12 @@ pitches);
 #X connect 95 0 27 0;
 #X connect 96 0 97 0;
 #X connect 97 0 71 0;
+#X connect 98 0 99 0;
+#X connect 98 0 100 0;
+#X connect 98 0 101 0;
+#X connect 99 0 21 0;
+#X connect 100 0 15 0;
+#X connect 101 0 16 0;
 #X coords 0 -1 1 1 300 500 2 100 100;
 #X restore 893 425 pd routing voices;
 #X text 202 172 CLIP : 0 = no / 1 = yes;
@@ -11125,7 +11136,7 @@ pitches);
 #X obj 1496 494 s V1_line;
 #X text 532 845 Roughness could trigger moment when a capture is taken
 of the peaks for Averaging Mode Hz to Ms;
-#N canvas 237 1 958 966 peaks 0;
+#N canvas 255 2 1077 966 peaks 0;
 #X obj 272 75 route /delta /theta /alpha /lobeta /hibeta /gamma;
 #X floatatom 273 102 5 0 0 0 - - -;
 #X floatatom 321 102 5 0 0 0 - - -;
