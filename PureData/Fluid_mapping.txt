@@ -1,0 +1,10 @@
+Fluid Mode
+
+High theta -> Low center of attraction (20-100)
+Gamma -> image_1_attraction
+Low delta -> high position_random (20-40)
+low BAratio -> low input_attraction (0-30)
+low BAratio -> low center_attraction (0-50)
+high TAratio -> high native_velocity (20-80)
+high Hurst -> high oscillation_amplitude (10-60)
+high SVD -> high position_split (10-60)
