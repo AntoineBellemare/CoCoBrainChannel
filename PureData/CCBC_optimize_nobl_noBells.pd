@@ -436,7 +436,7 @@
 #X connect 131 0 130 0;
 #X restore 177 899 pd LaunchControl_FM;
 #X obj 1341 768 hsl 128 15 0 7 0 1 empty empty empty -2 -8 0 10 -4160
--262144 -1 7400 0;
+-262144 -1 6800 0;
 #X obj 1338 646 hsl 128 15 0 1 0 1 empty empty empty -2 -8 0 10 -232576
 -1 -1 6100 0;
 #N canvas 160 68 988 618 buttons 0;
@@ -1579,17 +1579,17 @@
 #X obj 116 374 s index1;
 #X obj 179 376 s index2;
 #X obj 108 180 hsl 128 15 0.1 500 1 1 empty empty Index_2 -2 -8 0 10
--261682 -1 -1 6665 1;
+-261682 -1 -1 5965 1;
 #X obj 108 150 hsl 128 15 0.001 10 1 1 empty empty Index_1 -2 -8 0
-10 -262130 -1 -1 4862 1;
+10 -262130 -1 -1 4762 1;
 #X obj 108 210 hsl 128 15 0.1 500 1 1 empty empty Index_3 -2 -8 0 10
--261234 -1 -1 3412 1;
+-261234 -1 -1 6312 1;
 #X obj 58 424 s index3;
 #X obj 109 241 hsl 128 15 0.001 50 1 1 empty empty Index_4 -2 -8 0
-10 -232576 -1 -1 3773 1;
+10 -232576 -1 -1 5273 1;
 #X obj 124 427 s index4;
 #X obj 107 118 hsl 128 15 0.5 50 1 1 empty empty Ratio -2 -8 0 10 -228856
--1 -1 5800 1;
+-1 -1 4300 1;
 #X obj 356 444 hsl 128 15 0.001 50 1 1 empty empty Feedback -2 -8 0
 10 -262144 -1 -1 1300 1;
 #X obj 350 464 s feed;
@@ -1601,7 +1601,7 @@
 #X obj 693 905 outlet~;
 #X obj 1129 619 expr ($f1 + $f2);
 #X obj 700 378 hsl 128 15 0.001 15 1 1 empty empty Octaver -2 -8 0
-10 -262144 -1 -1 688 1;
+10 -262144 -1 -1 200 1;
 #X obj 1151 121 expr ($f2 * pow (2 \, ($f1/12)));
 #X obj 1159 181 ftom;
 #X obj 1159 203 int;
@@ -1651,7 +1651,7 @@
 #X connect 17 0 9 0;
 #X restore 231 235 pd octaver;
 #X obj 319 211 hsl 128 15 0.0001 20 1 1 empty empty Octaver -2 -8 0
-10 -262144 -1 -1 2868 1;
+10 -262144 -1 -1 2553 1;
 #X obj 317 165 r oct1;
 #X obj 223 193 FMsynth_EEG;
 #X obj 274 493 outlet~;
@@ -2885,7 +2885,7 @@ ratioATz hurstz svdz higuchiz;
 #X text 110 138 Numerator;
 #X text 219 138 Denominator;
 #X obj 113 192 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -261234
--1 -1 4;
+-1 -1 3;
 #X obj 114 272 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262130
 -1 -1 0;
 #X obj 114 290 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262130
@@ -2933,7 +2933,7 @@ ratioATz hurstz svdz higuchiz;
 #X obj 636 338 s gammasub;
 #X text 110 117 Peak's Multiplier;
 #X obj 251 205 hradio 15 1 1 7 empty empty empty 0 -8 0 10 -203904
--1 -1 2;
+-1 -1 4;
 #X text 248 173 Oct. val.;
 #X floatatom 252 228 5 0 0 0 - - -;
 #X obj 162 -147 expr (1 * pow ($f2 \, $f1));
@@ -3823,17 +3823,17 @@ value (Ms) of another peak (\$3);
 #X obj 990 241 r alphapeak;
 #X obj 1250 216 r lobetapeak;
 #X obj 108 210 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -256411
--1 -1 0;
+-1 -1 3;
 #X obj 203 191 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -175351
 -1 -1 3;
 #X obj 203 210 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -147377
--1 -1 2;
+-1 -1 5;
 #X obj 414 226 r HMOD;
 #X obj 709 204 r HMOD;
 #X obj 939 251 r HMOD;
 #X obj 1222 247 r HMOD;
 #X obj 107 129 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X obj 53 113 s HMOD;
 #X obj 454 467 s V1_note;
 #X obj 721 464 s V2_note;

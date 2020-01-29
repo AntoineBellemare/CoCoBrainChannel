@@ -30,10 +30,19 @@
 #X obj 439 168 route 1 2;
 #X obj 351 253 snapshot_peak \$2;
 #X obj 659 261 s \$2;
+#X floatatom 401 226 5 0 0 0 - - -;
+#X floatatom 327 188 5 0 0 0 - - -;
+#X floatatom 482 242 5 0 0 0 - - -;
+#X obj 441 367 spigot;
+#X obj 475 349 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 509 331 r avgsnap;
+#X obj 509 354 - 1;
 #X connect 0 0 11 2;
 #X connect 0 0 21 0;
 #X connect 2 0 13 0;
 #X connect 2 1 16 1;
+#X connect 2 1 29 0;
 #X connect 3 0 2 0;
 #X connect 3 0 6 0;
 #X connect 4 0 3 0;
@@ -43,7 +52,7 @@
 #X connect 8 0 9 0;
 #X connect 9 0 7 1;
 #X connect 10 0 11 1;
-#X connect 11 0 7 0;
+#X connect 11 0 30 0;
 #X connect 12 0 1 0;
 #X connect 13 0 12 0;
 #X connect 14 0 16 0;
@@ -51,6 +60,7 @@
 #X connect 15 0 14 0;
 #X connect 16 0 11 0;
 #X connect 16 1 26 0;
+#X connect 16 1 28 0;
 #X connect 17 0 7 0;
 #X connect 18 0 27 0;
 #X connect 19 0 20 0;
@@ -62,3 +72,8 @@
 #X connect 25 0 22 0;
 #X connect 25 1 19 0;
 #X connect 26 0 17 0;
+#X connect 30 0 31 0;
+#X connect 31 0 7 0;
+#X connect 32 0 31 1;
+#X connect 33 0 34 0;
+#X connect 34 0 32 0;
