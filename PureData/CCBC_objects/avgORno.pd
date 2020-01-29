@@ -1,17 +1,17 @@
-#N canvas 228 152 641 449 10;
+#N canvas 479 330 641 449 10;
 #X obj 352 102 inlet window;
-#X obj 297 249 outlet signal;
+#X obj 343 287 outlet signal;
 #X obj 283 144 gate 2;
 #X obj 247 123 + 1;
 #X obj 247 103 r \$1;
 #X obj 280 102 inlet value;
 #X floatatom 247 144 5 0 0 0 - - -;
-#X obj 336 211 spigot;
+#X obj 382 249 spigot;
 #X obj 247 164 - 1;
-#X obj 392 196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 438 234 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 436 101 inlet ramptime;
-#X obj 301 180 peak_avg;
+#X obj 347 218 peak_avg;
 #X obj 283 219 line;
 #X msg 283 198 \$1 25;
 #X connect 0 0 11 2;

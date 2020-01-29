@@ -12,7 +12,7 @@
 #X obj 295 296 loadbang;
 #X msg 295 319 1;
 #X obj 381 97 inlet;
-#X obj 521 207 r snappeak;
+#X obj 521 207 r \$1;
 #X connect 1 0 8 0;
 #X connect 2 0 3 0;
 #X connect 2 0 5 0;
