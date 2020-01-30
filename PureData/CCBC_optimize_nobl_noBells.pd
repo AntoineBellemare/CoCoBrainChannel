@@ -1,6 +1,6 @@
-#N struct 1150-f float x;
-#N canvas -8 0 1918 966 10;
-#X obj 1334 869 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#N struct 1464-f float x;
+#N canvas -9 -9 1920 976 10;
+#X obj 1372 847 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 45 50 1655 612 LaunchControl_EEG 0;
 #X floatatom 871 132 5 0 0 0 - - -;
@@ -635,7 +635,6 @@
 #X connect 78 0 72 0;
 #X connect 81 0 17 0;
 #X restore 177 857 pd buttons;
-#X obj 1295 923 *~ 1;
 #X obj 1291 942 dac~ 1 2;
 #X text 176 830 Midi controller;
 #X floatatom 1334 663 5 0 0 0 - - -;
@@ -760,7 +759,7 @@
 #X restore 52 206 pd EEG couplage;
 #X text 1337 751 Main Gain;
 #X obj 1341 716 hsl 128 15 0 4 0 1 empty empty empty -2 -8 0 10 -232576
--1 -1 5400 0;
+-1 -1 7500 0;
 #X obj 1337 697 r gainfm;
 #X floatatom 1337 733 5 0 0 0 - - -;
 #X obj 372 372 s bellson;
@@ -802,10 +801,10 @@
 #X connect 13 0 4 0;
 #X connect 14 0 6 3;
 #X connect 15 0 9 0;
-#X restore 1297 898 pd recording;
-#X floatatom 1387 883 5 0 0 0 - - -;
-#X text 1353 866 Start recording;
-#X obj 1334 843 r record;
+#X restore 1335 876 pd recording;
+#X floatatom 1425 861 5 0 0 0 - - -;
+#X text 1391 844 Start recording;
+#X obj 1372 821 r record;
 #X floatatom 1336 786 5 0 0 0 - - -;
 #N canvas 327 153 1317 757 FM 0;
 #X obj 357 385 inlet;
@@ -1579,14 +1578,14 @@
 #X obj 116 374 s index1;
 #X obj 179 376 s index2;
 #X obj 108 180 hsl 128 15 0.1 500 1 1 empty empty Index_2 -2 -8 0 10
--261682 -1 -1 5965 1;
+-261682 -1 -1 5765 1;
 #X obj 108 150 hsl 128 15 0.001 10 1 1 empty empty Index_1 -2 -8 0
 10 -262130 -1 -1 4762 1;
 #X obj 108 210 hsl 128 15 0.1 500 1 1 empty empty Index_3 -2 -8 0 10
--261234 -1 -1 6312 1;
+-261234 -1 -1 3600 1;
 #X obj 58 424 s index3;
 #X obj 109 241 hsl 128 15 0.001 50 1 1 empty empty Index_4 -2 -8 0
-10 -232576 -1 -1 5273 1;
+10 -232576 -1 -1 5200 1;
 #X obj 124 427 s index4;
 #X obj 107 118 hsl 128 15 0.5 50 1 1 empty empty Ratio -2 -8 0 10 -228856
 -1 -1 4300 1;
@@ -1598,7 +1597,7 @@
 #X obj 41 158 r ind2;
 #X obj 38 192 r ind3;
 #X obj 348 412 r feedback;
-#X obj 693 905 outlet~;
+#X obj 716 916 outlet~;
 #X obj 1129 619 expr ($f1 + $f2);
 #X obj 700 378 hsl 128 15 0.001 15 1 1 empty empty Octaver -2 -8 0
 10 -262144 -1 -1 200 1;
@@ -2512,12 +2511,12 @@
 #X connect 96 0 76 0;
 #X connect 97 0 80 0;
 #X connect 98 0 84 0;
-#X restore 817 791 pd fast FM;
+#X restore 852 778 pd fast FM;
 #X obj 62 372 s ratio;
 #X obj 1186 598 r mod3;
-#X obj 817 827 limiter;
-#X obj 766 834 limiter;
-#X obj 870 850 limiter;
+#X obj 852 814 limiter;
+#X obj 801 821 limiter;
+#X obj 905 837 limiter;
 #X msg 1128 702 \$1 800;
 #X obj 1203 721 r Buttonfm;
 #X obj 1209 771 spigot;
@@ -2762,7 +2761,7 @@ the Pd window.;
 #X obj 172 31 expr 0.001 * pow(1000 \, ($f1/10));
 #X obj 573 33 expr 0.001 * pow(300 \, ($f1/10));
 #X obj 371 32 expr 0.01 * pow(10000 \, ($f1/10));
-#X connect 0 0 19 0;
+#X obj 403 786 mixer4_EEG;
 #X connect 0 0 61 0;
 #X connect 1 0 34 0;
 #X connect 2 0 35 0;
@@ -2788,11 +2787,15 @@ the Pd window.;
 #X connect 31 0 58 0;
 #X connect 32 0 0 0;
 #X connect 32 0 60 0;
+#X connect 32 0 126 0;
 #X connect 33 0 20 0;
 #X connect 34 0 0 0;
+#X connect 34 0 126 2;
 #X connect 35 0 0 0;
+#X connect 35 0 126 1;
 #X connect 41 0 42 0;
 #X connect 42 0 0 0;
+#X connect 42 0 126 3;
 #X connect 44 0 0 0;
 #X connect 45 0 44 0;
 #X connect 49 0 29 0;
@@ -2861,6 +2864,7 @@ the Pd window.;
 #X connect 123 0 91 0;
 #X connect 124 0 93 0;
 #X connect 125 0 92 0;
+#X connect 126 0 19 0;
 #X coords 0 1 1 400 400 200 2 100 100;
 #X restore 1200 219 pd FM;
 #X text 49 540 Mapping ON/OFF;
@@ -2933,7 +2937,7 @@ ratioATz hurstz svdz higuchiz;
 #X obj 636 338 s gammasub;
 #X text 110 117 Peak's Multiplier;
 #X obj 251 205 hradio 15 1 1 7 empty empty empty 0 -8 0 10 -203904
--1 -1 4;
+-1 -1 2;
 #X text 248 173 Oct. val.;
 #X floatatom 252 228 5 0 0 0 - - -;
 #X obj 162 -147 expr (1 * pow ($f2 \, $f1));
@@ -3823,11 +3827,11 @@ value (Ms) of another peak (\$3);
 #X obj 990 241 r alphapeak;
 #X obj 1250 216 r lobetapeak;
 #X obj 108 210 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -256411
--1 -1 3;
+-1 -1 4;
 #X obj 203 191 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -175351
--1 -1 3;
+-1 -1 4;
 #X obj 203 210 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -147377
--1 -1 5;
+-1 -1 3;
 #X obj 414 226 r HMOD;
 #X obj 709 204 r HMOD;
 #X obj 939 251 r HMOD;
@@ -3888,7 +3892,7 @@ if ($f1 == 4 \, $f6 \, 0);
 #X connect 3 0 6 0;
 #X connect 5 0 0 0;
 #X restore 505 186 pd MOD1_1;
-#N canvas 0 50 572 439 MOD1_2 0;
+#N canvas 921 37 572 439 MOD1_2 0;
 #X floatatom 256 119 5 0 0 0 - - -;
 #X obj 255 145 /;
 #X floatatom 315 118 5 0 0 0 - - -;
@@ -4716,30 +4720,29 @@ octave;
 #X obj 591 249 route_EEG svd FMind2 100 1 0;
 #X obj 366 254 route_EEG gamma FMind3 100 1 0;
 #X obj 574 150 route_EEG gamma FMoct4 50 1 1;
-#X connect 0 0 21 2;
-#X connect 3 0 25 0;
-#X connect 4 0 9 0;
-#X connect 6 0 7 0;
-#X connect 6 0 7 1;
-#X connect 6 0 21 0;
-#X connect 6 0 21 1;
-#X connect 9 0 26 3;
-#X connect 10 0 4 0;
-#X connect 11 0 12 0;
-#X connect 15 0 17 0;
-#X connect 16 0 15 0;
-#X connect 17 0 26 4;
-#X connect 19 0 18 0;
-#X connect 20 0 11 0;
-#X connect 22 0 21 3;
-#X connect 24 0 0 0;
-#X connect 25 0 27 1;
-#X connect 26 0 27 0;
-#X connect 27 0 6 0;
-#X connect 29 0 57 0;
-#X connect 36 0 26 0;
-#X connect 36 1 26 1;
-#X connect 36 2 26 2;
-#X connect 40 0 39 0;
-#X connect 54 0 55 0;
-#X connect 59 0 58 0;
+#X connect 0 0 20 2;
+#X connect 3 0 24 0;
+#X connect 4 0 8 0;
+#X connect 8 0 25 3;
+#X connect 9 0 4 0;
+#X connect 10 0 11 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 16 0 25 4;
+#X connect 18 0 17 0;
+#X connect 19 0 10 0;
+#X connect 21 0 20 3;
+#X connect 23 0 0 0;
+#X connect 24 0 26 1;
+#X connect 25 0 26 0;
+#X connect 26 0 20 0;
+#X connect 26 0 20 1;
+#X connect 26 0 6 0;
+#X connect 26 0 6 1;
+#X connect 28 0 56 0;
+#X connect 35 0 25 0;
+#X connect 35 1 25 1;
+#X connect 35 2 25 2;
+#X connect 39 0 38 0;
+#X connect 53 0 54 0;
+#X connect 58 0 57 0;
