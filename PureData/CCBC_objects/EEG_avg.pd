@@ -3,12 +3,15 @@
 #X obj 168 172 avg~;
 #X obj 224 143 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 162 212 5 0 0 0 - - -, f 5;
+#X floatatom 162 212 5 0 0 0 - - -;
 #X obj 158 87 inlet;
 #X obj 166 255 outlet;
 #X obj 216 66 inlet start;
 #X obj 226 111 metro \$1;
 #X obj 337 78 inlet windows;
+#X obj 305 38 loadbang;
+#X obj 309 66 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
@@ -17,3 +20,5 @@
 #X connect 6 0 7 0;
 #X connect 7 0 2 0;
 #X connect 8 0 7 1;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
