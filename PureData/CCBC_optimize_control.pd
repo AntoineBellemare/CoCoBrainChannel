@@ -1,11 +1,11 @@
 #N canvas 203 175 1433 710 12;
 #N canvas 366 129 1434 725 routing 0;
 #X obj 108 210 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -256411
--1 -1 4;
-#X obj 203 191 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -175351
--1 -1 4;
-#X obj 203 210 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -147377
 -1 -1 1;
+#X obj 203 191 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -175351
+-1 -1 2;
+#X obj 203 210 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -147377
+-1 -1 3;
 #X obj 107 129 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
 -1 -1 1;
 #X text 457 61 Add control of wideness in Harmonic Mode 1 (span of
@@ -207,15 +207,15 @@ pitches);
 #X coords 0 -1 1 1 300 500 2 100 100;
 #X restore 430 95 pd routing voices;
 #N canvas -9 -9 1920 976 PeaksManip 0;
-#X floatatom 322 154 5 0 0 0 - - -;
+#X floatatom 335 157 5 0 0 0 - - -;
 #X obj 112 156 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -256411
--1 -1 1;
+-1 -1 3;
 #X obj 220 156 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -249255
 -1 -1 2;
 #X text 110 138 Numerator;
 #X text 219 138 Denominator;
 #X obj 113 192 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -261234
--1 -1 4;
+-1 -1 3;
 #X obj 114 272 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262130
 -1 -1 0;
 #X obj 114 290 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262130
@@ -231,7 +231,7 @@ pitches);
 #X obj 32 215 s deltaAVG;
 #X obj 31 236 s thetaAVG;
 #X obj 219 272 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -261234
--1 -1 5;
+-1 -1 3;
 #X text 216 250 Number of sub-octaves;
 #X obj 32 258 s alphaAVG;
 #X obj 26 279 s lobetaAVG;
@@ -242,19 +242,19 @@ pitches);
 #X obj 665 245 s deltasub;
 #X obj 489 245 expr (1 * pow (2 \, $f1));
 #X obj 219 290 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -261234
--1 -1 5;
+-1 -1 3;
 #X obj 490 264 expr (1 * pow (2 \, $f1));
 #X obj 219 308 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -261234
--1 -1 5;
+-1 -1 3;
 #X obj 489 282 expr (1 * pow (2 \, $f1));
 #X obj 219 326 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -261234
--1 -1 5;
+-1 -1 3;
 #X obj 490 301 expr (1 * pow (2 \, $f1));
 #X obj 219 344 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -261234
--1 -1 5;
+-1 -1 3;
 #X obj 489 319 expr (1 * pow (2 \, $f1));
 #X obj 219 362 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -261234
--1 -1 5;
+-1 -1 3;
 #X obj 490 338 expr (1 * pow (2 \, $f1));
 #X obj 666 264 s thetasub;
 #X obj 665 282 s alphasub;
@@ -328,7 +328,7 @@ pitches);
 #X msg 712 71 2;
 #X msg 657 62 3;
 #X obj 219 384 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -250962
--1 -1 5;
+-1 -1 3;
 #X msg 494 157 2;
 #X obj 382 156 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -631,6 +631,10 @@ pitches);
 #X obj 223 40 s peakdenom;
 #X obj 370 12 s Noct;
 #X obj 485 19 s octval;
+#X floatatom 852 281 5 0 0 0 - - -;
+#X obj 852 255 r deltacomp;
+#X obj 618 155 r octval2ctrl;
+#X obj 743 158 r peakmult;
 #X connect 1 0 93 0;
 #X connect 2 0 94 0;
 #X connect 5 0 95 0;
@@ -698,6 +702,9 @@ pitches);
 #X connect 88 0 90 0;
 #X connect 91 0 92 0;
 #X connect 92 0 88 0;
+#X connect 98 0 97 0;
+#X connect 99 0 44 0;
+#X connect 100 0 0 0;
 #X coords 0 -1 1 1 350 350 2 100 100;
 #X restore 760 97 pd PeaksManip;
 #N canvas 714 211 450 300 Hz2Ms 0;
@@ -726,6 +733,20 @@ value (Ms) of another peak (\$3);
 #X obj 130 314 s index2;
 #X obj 136 386 s index3;
 #X obj 135 441 s index4;
+#X text 396 18 Click on harmonic mode Click on Quantize;
+#N canvas 0 50 450 300 netreceive 0;
+#X obj 196 57 netreceive 3333;
+#X obj 196 83 route octval2ctrl peakmult;
+#X floatatom 196 109 5 0 0 0 - - -;
+#X floatatom 283 111 5 0 0 0 - - -;
+#X obj 158 133 s octval2ctrl;
+#X obj 283 136 s peakmult;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X restore 1230 69 pd netreceive;
 #X connect 4 0 11 0;
 #X connect 5 0 10 0;
 #X connect 6 0 12 0;
