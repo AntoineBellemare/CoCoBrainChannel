@@ -1,22 +1,22 @@
-#N canvas 388 60 1518 789 12;
+#N canvas 137 85 1685 875 12;
 #N canvas 0 50 1040 587 sidebands 0;
 #X obj 162 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 162 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 189 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 189 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 162 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 189 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 216 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 216 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 162 202 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 189 202 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 216 202 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 216 202 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 241 202 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -149,10 +149,10 @@
 #X obj 1033 237 sidebands_values alphapeak hibetapeak;
 #X obj 1046 368 sidebands_values alphapeak gammapeak;
 #X obj 1443 170 +~;
-#X obj 1443 132 +~;
+#X obj 1454 118 +~;
 #X obj 1456 301 +~;
 #X obj 1456 263 +~;
-#X obj 1317 95 sidebands_values lobetapeak hibetapeak;
+#X obj 1344 93 sidebands_values lobetapeak hibetapeak;
 #X obj 1330 226 sidebands_values lobetapeak gammapeak;
 #X obj 1456 437 +~;
 #X obj 1456 399 +~;
@@ -178,7 +178,7 @@
 #X obj 292 379 snapshot~;
 #X obj 266 344 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 292 405 5 0 0 0 - - -;
+#X floatatom 292 405 5 0 0 0 - - -, f 5;
 #X obj 380 253 sub_voice \$0-s2 \$0-input;
 #X obj 358 287 sub_voice \$0-s2 \$0-input;
 #X obj 396 173 sub_voice \$0-s1 \$0-input;
