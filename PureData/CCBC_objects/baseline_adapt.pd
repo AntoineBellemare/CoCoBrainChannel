@@ -7,7 +7,7 @@
 #X obj 102 132 f;
 #X obj 151 158 + 1;
 #X obj 101 109 bang;
-#X obj 261 281 list-stddev;
+#X obj 261 281 list-abs/list-stddev;
 #X floatatom 268 304 5 0 0 1 Std_Dev - -, f 5;
 #X obj 211 216 bang;
 #X obj 38 27 inlet;
@@ -34,7 +34,7 @@ get mean from array and return.;
 #X obj 134 309 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 124 389 5 0 0 0 - - -, f 5;
-#X obj 371 290 list-mean;
+#X obj 371 290 list-abs/list-mean;
 #X floatatom 366 319 5 0 0 0 - - -, f 5;
 #X obj 330 421 outlet;
 #X obj 230 424 outlet;

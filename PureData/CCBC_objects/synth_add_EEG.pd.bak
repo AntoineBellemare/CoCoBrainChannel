@@ -1,0 +1,28 @@
+#N canvas 1 78 465 403 10;
+#X text 49 142 Freq (Hz);
+#X obj 40 361 outlet~;
+#X text 13 7 Une voix du synth MIDI.;
+#X text 14 20 Reçoit en argument le numéro unique du synth (\$0 de
+la patch principale) et la passe directement aux oscillateurs).;
+#X obj 40 167 oscil5 1 \$1;
+#X obj 114 77 inlet freq;
+#X floatatom 134 119 5 0 0 0 - - -, f 5;
+#X obj 40 339 *~ 1;
+#X obj 40 188 oscil5 2 \$1;
+#X obj 40 209 oscil5 3 \$1;
+#X obj 40 230 oscil5 4 \$1;
+#X obj 40 251 oscil5 5 \$1;
+#X obj 40 272 oscil5 6 \$1;
+#X obj 40 293 oscil5 7 \$1;
+#X obj 40 314 oscil5 8 \$1;
+#X connect 4 0 8 0;
+#X connect 5 0 4 1;
+#X connect 5 0 6 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 7 0;

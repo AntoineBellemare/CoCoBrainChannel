@@ -1,0 +1,16 @@
+#N canvas 1 51 796 570 16;
+#X obj 223 262 adsr~ 10 250 0.3 500;
+#X obj 170 385 *~;
+#X obj 170 412 outlet~;
+#X obj 159 43 inlet midi;
+#X text 269 43 [pitch \, velocity];
+#X obj 159 91 unpack;
+#X obj 159 142 mtof;
+#X obj 159 260 osc~;
+#X connect 0 0 1 1;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;

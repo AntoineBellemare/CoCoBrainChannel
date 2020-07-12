@@ -1,0 +1,14 @@
+#N canvas 0 50 306 169 10;
+#X obj 103 80 expr if (\$1 == 1 \, 1 \, 0);
+#X msg 103 99 \$1 25;
+#X obj 103 118 line~;
+#X obj 88 143 *~;
+#X obj 88 162 outlet~;
+#X obj 88 39 inlet~;
+#X obj 103 62 r \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;
+#X connect 6 0 0 0;

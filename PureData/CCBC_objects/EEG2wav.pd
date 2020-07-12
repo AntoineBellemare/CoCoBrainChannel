@@ -1,6 +1,6 @@
 #N canvas 0 50 864 456 10;
-#X obj 347 170 list-mean;
-#X obj 417 171 list-stddev;
+#X obj 347 170 list-abs/list-mean;
+#X obj 417 171 list-abs/list-stddev;
 #X obj 531 180 list length;
 #X obj 541 253 sel 1;
 #X obj 543 280 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144

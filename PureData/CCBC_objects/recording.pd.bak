@@ -1,0 +1,33 @@
+#N canvas 0 50 789 378 10;
+#X obj 323 156 writesf~ 2;
+#X obj 253 -52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 253 -32 t b b b;
+#X msg 351 92 start;
+#X msg 361 121 stop;
+#X floatatom 341 8 5 0 0 0 - - -, f 5;
+#X obj 341 -15 counter 0 100;
+#X obj 375 -44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 394 -52 reset;
+#X msg 341 50 open \$1;
+#X obj 67 81 inlet~;
+#X obj 126 79 inlet~;
+#X obj 202 -77 inlet;
+#X obj 216 73 delay 200000;
+#X obj 333 29 makefilename ..hello%d.wav;
+#X connect 1 0 2 0;
+#X connect 2 0 13 0;
+#X connect 2 1 3 0;
+#X connect 2 2 6 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 14 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 2;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 1;
+#X connect 12 0 1 0;
+#X connect 13 0 4 0;
+#X connect 14 0 9 0;
