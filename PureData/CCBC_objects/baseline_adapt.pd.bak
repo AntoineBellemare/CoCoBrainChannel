@@ -7,7 +7,7 @@
 #X obj 102 132 f;
 #X obj 151 158 + 1;
 #X obj 101 109 bang;
-#X obj 261 281 list-stddev;
+#X obj 261 281 list-abs/list-stddev;
 #X floatatom 268 304 5 0 0 1 Std_Dev - -, f 5;
 #X obj 211 216 bang;
 #X obj 38 27 inlet;
