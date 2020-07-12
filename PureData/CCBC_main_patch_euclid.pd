@@ -3635,7 +3635,7 @@ scales;
 #X obj 477 176 between1n2;
 #X obj 109 250 pack f f f f f f f f f f f f f f f;
 #X obj 109 269 list;
-#X obj 109 289 list-sort asc;
+#X obj 109 289 list-abs/list-sort asc;
 #X text 161 29 Higher band is divided by lower band Results are reranged
 between 1 and 2 and sorted ascendally;
 #X obj 243 329 list-abs/list-nth;
