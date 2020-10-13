@@ -232,6 +232,7 @@ def compute_consonance (peaks, limit):
             #print(cons_temp)
             cons_temp = (cons_temp.numerator + cons_temp.denominator)/(cons_temp.numerator * cons_temp.denominator)
             #print(cons_temp)
+            #if limit > 0:
             if cons_temp >= 1 :
                 cons_temp = None
                 p2x = None

@@ -88,9 +88,11 @@ def compute_peaks_avg(epochs, condition, chs, FREQ_BANDS, dim_reduc = 'avg', tmi
 
             FREQs_temp2.append(FREQs_mode)
             print(FREQs_temp2)
+        if dim_reduc ==None:
+            FREQs_temp2.append(FREQs_temp)
     if dim_reduc =='avg':
         FREQs_temp2 = [round(num, 1) for num in FREQs_temp2]
-    if dim_reduc =='mode':
+    elif dim_reduc =='mode':
         FREQs_temp2 = list(itertools.chain(*FREQs_temp2))
     FREQs = np.array(FREQs_temp2)
     return FREQs
