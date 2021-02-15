@@ -37,7 +37,7 @@ def compute_peaks(epochs, condition, chs, FREQ_BANDS, tmin = None, tmax = None, 
         #psds, freqs = function(epochs[t], fmin=min, fmax=max, bandwidth = 4, picks = EEG_chs)  #PSDs are calculated with this function, giving power values and corresponding frequency bins as output
         psds, freqs = psd_welch(evoked, fmin=min, fmax=max, n_fft = fft_size)
         psds = 10. * np.log10(psds)   #PSDs values are transformed in log scale to compensate for the 1/f natural slope
-        index_max = np.argmax(np.array(psds[12][:]))
+        index_max = np.argmax(np.array(psds[13][:]))
         freq = freqs[index_max]
         print(index_max)
         #psds_mean = np.average(psds, axis=1) #Average across bins to obtain one value for the entire frequency range
