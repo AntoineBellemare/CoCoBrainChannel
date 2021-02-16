@@ -28,6 +28,7 @@ def compute_peaks(epochs, condition, chs, FREQ_BANDS, tmin = None, tmax = None, 
     print(n_samples)
     precision = precision/(sf/n_samples)
     fft_size = int(n_samples/precision)
+    print(fft_size)
 
     evoked = epochs[condition].average(chs)
     FREQs = []
@@ -64,6 +65,7 @@ def compute_peaks_avg(epochs, condition, chs, FREQ_BANDS, dim_reduc = 'avg', tmi
     print(n_samples)
     precision = precision/(sf/n_samples)
     fft_size = int(n_samples/precision)
+    print(fft_size)
     #Average across trials for specific condition
     evoked = epochs[condition].average(chs)
     FREQs_temp2 = []
