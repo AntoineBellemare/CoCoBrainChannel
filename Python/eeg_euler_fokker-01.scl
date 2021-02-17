@@ -1,0 +1,26 @@
+! Scale produced by pytuning. For tuning yoshimi or zynaddsubfx,
+! only include the portion below the final '!'
+!
+eeg_euler_fokker-01
+ 20
+!
+135/128
+9/8
+4725/4096
+75/64
+315/256
+5/4
+21/16
+675/512
+2835/2048
+45/32
+189/128
+3/2
+1575/1024
+105/64
+14175/8192
+225/128
+945/512
+15/8
+63/32
+2/1

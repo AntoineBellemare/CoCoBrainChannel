@@ -1,0 +1,19 @@
+! Scale produced by pytuning. For tuning yoshimi or zynaddsubfx,
+! only include the portion below the final '!'
+!
+eeg_scale_test_2
+ 13
+!
+138.57266
+247.74105
+315.64129
+386.31371
+454.21395
+498.04500
+563.38234
+701.95500
+745.78605
+884.35871
+1061.42734
+1132.09977
+1200.00000
